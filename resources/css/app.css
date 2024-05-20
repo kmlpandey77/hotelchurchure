@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+    display: none !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+p {
+    margin-bottom: 10px;
+}
+
+.page p {
+    margin-bottom: 15px;
+    text-align: justify;
+    text-align-last: center;
+}
+
+.divider {
+    height: 30px;
+    -webkit-mask: url("../images/divider.svg") no-repeat 50% 50%;
+    mask: url("../images/divider.svg") no-repeat 50% 50%;
+    -webkit-mask-size: 250px;
+    mask-size: 250px;
+    width: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2);
+    height: 220px;
+}
+
+.swiper-slide img {
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.swiper-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    z-index: 9;
+    text-align: center;
+    font-size: 1.5em;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0) 100%
+    );
+}
+
+/*social color*/
+.social {
+}
+.facebook {
+    color: #3b5998;
+}
+.twitter {
+    color: #1da1f2;
+}
+.youtube {
+    color: #ff0000;
+}
+.viber {
+    color: #665cac;
+}
+.messenger {
+    color: #0078ff;
+}
+.weixin {
+    color: #2f8819;
+}
+.instagram {
+    color: #8a3ab9;
+}
+.pinterest {
+    color: #e60023;
+}
+.linkedin {
+    color: #0e76a8;
+}
