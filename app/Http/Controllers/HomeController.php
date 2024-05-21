@@ -14,8 +14,8 @@ class HomeController extends Controller
     {
         $slides = Slide::with('media')->take(5)->get();
         $page = Page::find(5);
-        $rooms = Room::with('media')->take(5)->get();
-        $facilities = Facility::take(6)->get();
+        $rooms = Room::with('media')->take(3)->get();
+        $facilities = Facility::take(3)->get();
         $recommendations = Recommendation::where('status', 1)->take(5)->get();
 
         return view('index', compact('slides', 'page', 'rooms', 'facilities', 'recommendations'));

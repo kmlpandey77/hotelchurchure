@@ -1,11 +1,11 @@
-<nav class="border-gray-200 bg-white px-2 py-2.5 shadow-sm sm:px-4"
+<nav class="bg-primary px-2 py-2.5 shadow-sm sm:px-4"
      x-data="{ navOpen: false }"
      id="main-nav">
-    <div class="container mx-auto flex flex-wrap items-center justify-between relative"
+    <div class="container mx-auto flex flex-wrap items-center justify-end relative"
          :class="navOpen ? 'relative' : ''">
         <a href="/"
-           class="flex items-center">
-            <img src="{{asset('images/logo.png')}}" class="mr-3 h-20" alt="Logo"/>
+           class="flex items-center bg-white absolute -top-[87px] left-0 shadow-lg z-10">
+            <img src="{{asset('images/logo.png')}}" class="mr-3 h-44" alt="Logo"/>
         </a>
         <button type="button" @click="navOpen = !navOpen"
                 class="ml-3 inline-flex items-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 md:hidden"
@@ -30,17 +30,9 @@
             <x-navbar>
                 @foreach($main_menu as $link => $title)
                     <x-navbar.item>
-                        <x-navbar.link class="md:px-0" href="{{ url($link) }}" title="{!! $title !!}"/>
+                        <x-navbar.link class="md:px-0 text-white" href="{{ url($link) }}" title="{!! $title !!}"/>
                     </x-navbar.item>
                 @endforeach
-
-                <x-navbar.item>
-                    <x-navbar.link
-                            class="font-medium bg-red-600 text-white px-8 py-2 rounded-full uppercase hover:!text-white"
-                            href="{{route('reservation')}}"
-                            title="Reservation"
-                    />
-                </x-navbar.item>
             </x-navbar>
         </div>
     </div>

@@ -25,7 +25,7 @@
         </ul>
         <p class="text-gray-700">
             From
-            <b class="text-2xl text-primary">${{$room->price}}</b>
+            <b class="text-2xl text-primary">{{$room->price}}</b>
             per night
         </p>
         <div class="w-40 mt-5">

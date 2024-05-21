@@ -1,35 +1,49 @@
-<header class="text-sm px-2 py-2 shadow sm:px-4 border-b">
-    <div class="container mx-auto md:flex md:flex-wrap md:items-center md:justify-between">
-        <div class="flex flex-col items-center md:flex-row">
-            <div class="flex items-center mb-2 md:mb-0 md:mr-8">
-                <div class="h-5 w-5 mr-3 text-primary">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path fill="currentColor"
-                            d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
+<header class="text-sm px-2 py-5 shadow sm:px-4 border-b">
+    <div class="container mx-auto md:flex md:flex-wrap md:items-center md:justify-end md:gap-24">
+        <div class="flex flex-col items-center md:flex-row md:gap-16">
+            <div class="flex items-center mb-2 md:mb-0">
+                <div class="h-7 w-7 mr-3 text-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                         class="bi bi-question-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                        <path
+                            d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"/>
                     </svg>
                 </div>
-                <div>
+                <div class="font-medium text-md underline">Have any Questions?</div>
+            </div>
+
+            <div class="flex items-center mb-2 md:mb-0">
+                <div class="h-7 w-7 mr-3 text-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                         class="bi bi-envelope" viewBox="0 0 16 16">
+                        <path
+                            d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+                    </svg>
+                </div>
+                <div class="font-medium text-md">
                     {{ label('global:emails') }}
                 </div>
             </div>
             <div class="flex items-center">
-                <div class="h-5 w-5 mr-3 text-primary">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path fill="currentColor"
-                            d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
+                <div class="h-7 w-7 mr-3 text-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                         class="bi bi-telephone" viewBox="0 0 16 16">
+                        <path
+                            d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
                     </svg>
                 </div>
-                <div>
+                <div class="font-medium text-md">
                     {{ label('global:phones') }}
                 </div>
             </div>
         </div>
         <div class="flex justify-center space-x-2 mt-5 md:mt-0">
-            @foreach ($socials as $social)
-                <a target="_blank" href="{{ $social->link }}">
-                    <i class="fa-brands fa-{{ $social->icon }} fa-xl {{ str($social->title)->slug() }}"></i>
-                </a>
-            @endforeach
+            <x-navbar.link
+                class="font-medium bg-gradient-to-r from-secondary to-[#C36902] text-white px-8 py-2 rounded uppercase hover:!text-white"
+                href="{{route('reservation')}}"
+                title="Reservation"
+            />
         </div>
     </div>
 </header>

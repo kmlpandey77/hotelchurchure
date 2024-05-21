@@ -15,7 +15,8 @@ module.exports = {
                 serif: ["ZCOOL XiaoWei", ...defaultTheme.fontFamily.serif],
             },
             colors: {
-                primary: "#a77131"
+                primary: "#1C98ED",
+                secondary: "#F4890F"
             },
         },
     },
