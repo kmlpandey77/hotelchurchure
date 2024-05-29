@@ -63,7 +63,9 @@
                         <x-forms.input :value="old('name')" name="name" label="Full Name" class="mt-5"/>
                         <x-forms.input :value="old('email')" name="email" label="Email" class="mt-5"/>
                         <x-forms.textarea :value="old('message')" name="message" label="Message" class="mt-5"/>
-                        <x-forms.btn label="Submit" class="mt-5"/>
+
+                        <x-forms.btn label="Submit" class="mt-5" />
+
                     </form>
                 </div>
             </div>

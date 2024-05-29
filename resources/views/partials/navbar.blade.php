@@ -1,12 +1,12 @@
 <nav class="bg-primary px-2 py-2.5 shadow-sm sm:px-4"
      x-data="{ navOpen: false }"
      id="main-nav">
-    <div class="container mx-auto flex flex-wrap items-center justify-end relative"
+    <div class="container mx-auto flex flex-wrap items-center relative"
          :class="navOpen ? 'relative' : ''">
-        <a href="/"
-           class="flex items-center bg-white absolute -top-[87px] left-0 shadow-lg z-10">
-            <img src="{{asset('images/logo.png')}}" class="mr-3 h-44" alt="Logo"/>
-        </a>
+{{--        <a href="/"--}}
+{{--           class="flex items-center bg-white absolute -top-[87px] left-0 shadow-lg z-10">--}}
+{{--            Brand--}}
+{{--        </a>--}}
         <button type="button" @click="navOpen = !navOpen"
                 class="ml-3 inline-flex items-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 md:hidden"
                 aria-controls="mobile-menu" aria-expanded="false">
@@ -24,9 +24,7 @@
                       clip-rule="evenodd"></path>
             </svg>
         </button>
-        <div x-cloak class="w-full md:block md:w-auto z-50"
-             :class="navOpen ? 'bg-white absolute top-[100%] ' : 'hidden'"
-        >
+        <div x-cloak class="flex flex-col justify-between w-full" x-show="navOpen">
             <x-navbar>
                 @foreach($main_menu as $link => $title)
                     <x-navbar.item>
@@ -34,6 +32,32 @@
                     </x-navbar.item>
                 @endforeach
             </x-navbar>
+
+            <div class="flex justify-center mt-5 md:mt-0">
+                <x-navbar.link
+                    class="font-medium bg-gradient-to-r from-secondary to-[#C36902] text-white px-12 py-2 rounded uppercase hover:!text-white"
+                    href="{{route('reservation')}}"
+                    title="Reservation"
+                />
+            </div>
+        </div>
+
+        <div x-cloak class="justify-between w-full hidden md:flex">
+            <x-navbar>
+                @foreach($main_menu as $link => $title)
+                    <x-navbar.item>
+                        <x-navbar.link class="md:px-0 text-white" href="{{ url($link) }}" title="{!! $title !!}"/>
+                    </x-navbar.item>
+                @endforeach
+            </x-navbar>
+
+            <div class="flex justify-center mt-5 md:mt-0">
+                <x-navbar.link
+                    class="font-medium bg-gradient-to-r from-secondary to-[#C36902] text-white px-12 py-2 rounded uppercase hover:!text-white"
+                    href="{{route('reservation')}}"
+                    title="Reservation"
+                />
+            </div>
         </div>
     </div>
 </nav>

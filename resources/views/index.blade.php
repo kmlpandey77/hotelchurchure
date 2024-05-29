@@ -5,9 +5,8 @@
         <div class="swiper-wrapper">
             @foreach($slides as $slide)
                 <div class="swiper-slide object-cover !h-[220px] md:!h-[550px]" data-caption="{{$slide->title}}">
-                    <img data-src="{{$slide->getFirstMediaUrl('slides')}}" class="swiper-lazy w-full"
+                    <img src="{{$slide->getFirstMediaUrl('slides')}}" class="w-full"
                          alt="{{$slide->title}}"/>
-                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                 </div>
             @endforeach
         </div>
@@ -33,9 +32,9 @@
             </div>
 
             <div class="bg-white shadow rounded-lg mt-8">
-                <div class="flex">
+                <div class="flex flex-wrap">
                     @foreach($facilities as $facility)
-                        <div class="flex items-center space-x-4 w-1/3 p-8">
+                        <div class="flex items-center space-x-4 w-full md:w-1/3 p-8">
                             <div class="text-primary h-10 w-10">
                                 {!! $facility->icon !!}
                             </div>

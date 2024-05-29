@@ -1,5 +1,10 @@
 <header class="text-sm px-2 py-5 shadow sm:px-4 border-b">
-    <div class="container mx-auto md:flex md:flex-wrap md:items-center md:justify-end md:gap-24">
+    <div class="container mx-auto md:flex md:flex-wrap md:items-center md:justify-between md:gap-24">
+        <div class="brand flex items-center">
+            <img src="{{asset('images/logo.png?')}}" class="mr-2 h-16" alt="Logo"/>
+            <span class="text-2xl text-primary font-semibold">{{ config('app.name') }}</span>
+        </div>
+
         <div class="flex flex-col items-center md:flex-row md:gap-16">
             <div class="flex items-center mb-2 md:mb-0">
                 <div class="h-7 w-7 mr-3 text-primary">
@@ -37,13 +42,6 @@
                     {{ label('global:phones') }}
                 </div>
             </div>
-        </div>
-        <div class="flex justify-center space-x-2 mt-5 md:mt-0">
-            <x-navbar.link
-                class="font-medium bg-gradient-to-r from-secondary to-[#C36902] text-white px-8 py-2 rounded uppercase hover:!text-white"
-                href="{{route('reservation')}}"
-                title="Reservation"
-            />
         </div>
     </div>
 </header>
